@@ -1,0 +1,52 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "contextual-logging"
+version = "0.0.0"
+description = "A logging interface to address your observability requirements."
+authors = ["u-ways <work@u-ways.info>"]
+readme = "README.md"
+license = "MIT"
+package-mode = true
+packages = [{ include = "src", from = "." }]
+homepage = "https://github.com/u-ways/contextual-logging"
+documentation = "https://github.com/u-ways/contextual-logging/blob/main/README.md"
+repository = "https://github.com/u-ways/contextual-logging"
+keywords = ["logging", "logger", "context"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development",
+    "Topic :: System :: Logging",
+    "Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyyaml = "^6.0"
+
+[tool.poetry.dev-dependencies]
+pyclean = "^3.0.0"
+black = "^24.4.0"
+flake8 = "^7.1.0"
+flake8-pyproject = "^1.2.3"
+pytest = "^8.1.1"
+
+[tool.poetry.group.test.dependencies]
+fastapi = "^0.111.0"
+
+[tool.black]
+line-length = 120
+
+[tool.flake8]
+max-line-length = 120
+count = true
+
+[tool.pytest.ini_options]
+pythonpath = "src tests"
+testpaths = ["tests"]
