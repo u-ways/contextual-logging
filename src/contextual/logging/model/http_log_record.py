@@ -6,6 +6,7 @@ from contextual.logging.model import BaseLogRecord
 
 @dataclass
 class HttpLogRecord(BaseLogRecord):
+    request_id: str = ""
     request_method: str = ""
     request_url: str = ""
     request_query_params: Dict[str, Any] = None

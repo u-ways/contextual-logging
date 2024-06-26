@@ -3,6 +3,7 @@ import logging
 import logging.config
 from pathlib import Path
 
+# noinspection PyUnresolvedReferences
 from contextual.logging import ContextualLogger
 
 

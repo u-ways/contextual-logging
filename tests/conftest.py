@@ -2,6 +2,7 @@ import logging
 
 import pytest
 
+# noinspection PyUnresolvedReferences
 from contextual.logging import ContextualLogger
 
 
